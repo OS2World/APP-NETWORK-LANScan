@@ -1,0 +1,23 @@
+option  link(linkwithmultithreadlib), link(linkwithsharedlib,no),
+        link(defaultlibsname, "netapi32.lib"),
+        link(defaultlibsname, "rexx.lib"),
+        opt(level, "2"), opt(tune, "pentium"), gen(arch, "pentium"),
+        define("LANSCAN", ), define("DAEMON", ),
+        info(use, "yes"),
+        info(gnr, "yes"),
+        info(eff, "yes"),
+        info(inl, "yes"),
+        info(cpy, "yes"),
+        info(cnv, "yes"),
+        info(cmp, "yes"),
+        info(got, "yes"),
+        info(ext, "yes"),
+        info(rea, "yes")
+{
+   target "LanScanD.exe"
+   {
+      source type(c) "LanScan.c"
+      source type(rc) "LanScanD.rc"
+      source type(obj) "SmbName/SmbName.obj"
+   }
+}

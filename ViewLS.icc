@@ -1,0 +1,21 @@
+option  link(pmtype, pm),
+        link(linkwithmultithreadlib), link(linkwithsharedlib,no),
+        opt(level, "2"), opt(tune, "pentium"), gen(arch, "pentium"),
+        define("VIEW_LS", ), res_rc_options("-d VIEW_LS"),
+        info(use, "yes"),
+        info(gnr, "yes"),
+        info(eff, "yes"),
+        info(inl, "yes"),
+        info(cpy, "yes"),
+        info(cnv, "yes"),
+        info(cmp, "yes"),
+        info(got, "yes"),
+        info(ext, "yes"),
+        info(rea, "yes")
+{
+   target "ViewLS.exe"
+   {
+      source type(c) "ViewLS.c"
+      source type(rc) "LanScan.rc"
+   }
+}

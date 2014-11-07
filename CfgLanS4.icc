@@ -1,0 +1,24 @@
+option  link(pmtype, pm),
+        link(linkwithmultithreadlib), link(linkwithsharedlib,no),
+        link(defaultlibsname, "tcp32dll.lib"),
+        link(defaultlibsname, "so32dll.lib"),
+        opt(level, "2"), opt(tune, "486"), gen(arch, "486"),
+        define("TCPV40HDRS", ), define("BSD_SELECT", ),
+        define("CONFIG_LS", ), res_rc_options("-d CONFIG_LS"),
+        info(use, "yes"),
+        info(gnr, "yes"),
+        info(eff, "yes"),
+        info(inl, "yes"),
+        info(cpy, "yes"),
+        info(cnv, "yes"),
+        info(cmp, "yes"),
+        info(got, "yes"),
+        info(ext, "yes"),
+        info(rea, "yes")
+{
+   target "CfgLanS4.exe"
+   {
+      source type(c) "CfgLanS.c"
+      source type(rc) "LanScan.rc"
+   }
+}

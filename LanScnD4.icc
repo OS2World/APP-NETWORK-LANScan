@@ -1,0 +1,26 @@
+option  link(linkwithmultithreadlib), link(linkwithsharedlib,no),
+        link(defaultlibsname, "netapi32.lib"),
+        link(defaultlibsname, "tcp32dll.lib"),
+        link(defaultlibsname, "so32dll.lib"),
+        link(defaultlibsname, "rexx.lib"),
+        opt(level, "2"), opt(tune, "486"), gen(arch, "486"),
+        define("TCPV40HDRS", ), define("BSD_SELECT", ),
+        define("LANSCAN", ), define("DAEMON", ),
+        info(use, "yes"),
+        info(gnr, "yes"),
+        info(eff, "yes"),
+        info(inl, "yes"),
+        info(cpy, "yes"),
+        info(cnv, "yes"),
+        info(cmp, "yes"),
+        info(got, "yes"),
+        info(ext, "yes"),
+        info(rea, "yes")
+{
+   target "LanScnD4.exe"
+   {
+      source type(c) "LanScan.c"
+      source type(rc) "LanScanD.rc"
+      source type(obj) "SmbName/SmbName4.obj"
+   }
+}

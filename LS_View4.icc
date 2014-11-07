@@ -1,0 +1,22 @@
+option  link(linkwithmultithreadlib),
+        link(linkwithsharedlib,no), opt(level, "2"),
+        link(defaultlibsname, "tcp32dll.lib"),
+        link(defaultlibsname, "so32dll.lib"),
+        opt(tune, "486"), gen(arch, "486"),
+        define("TCPV40HDRS", ), define("BSD_SELECT", ),
+        info(use, "yes"),
+        info(gnr, "yes"),
+        info(eff, "yes"),
+        info(inl, "yes"),
+        info(cpy, "yes"),
+        info(cnv, "yes"),
+        info(cmp, "yes"),
+        info(got, "yes"),
+        info(ext, "yes"),
+        info(rea, "yes")
+{
+   target "LS_View4.cgi"
+   {
+      source type(c) "LS_View.c"
+   }
+}

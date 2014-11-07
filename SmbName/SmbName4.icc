@@ -1,0 +1,9 @@
+option  link(linkwithmultithreadlib), link(linkwithsharedlib,no),
+        opt(level, "2"), opt(tune, "486"), gen(arch, "486"),
+        define("TCPV40HDRS", ), define("BSD_SELECT", )
+{
+   target "SmbName4.obj"
+   {
+      source type(c) "SmbName.c"
+   }
+}
